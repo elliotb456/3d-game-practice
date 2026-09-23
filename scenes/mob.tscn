@@ -17,9 +17,8 @@ script = ExtResource("1_bsing")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.009277344, 0.26907945, -0.06137085)
 shape = SubResource("BoxShape3D_dxwi8")
 
-[node name="VisibleOnScreenEnabler3D" type="VisibleOnScreenEnabler3D" parent="." unique_id=1682744354]
-transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 0.3068118, 0.26432204)
-visible = false
-aabb = AABB(-1.8270162, -0.8664775, -2.5937865, 3.6540325, 1.732955, 5.187573)
+[node name="VisibleOnScreenNotifier3D" type="VisibleOnScreenNotifier3D" parent="." unique_id=1129759421]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.3221743, 0.2499919)
+aabb = AABB(-1.3062768, -0.6477808, -1.7120274, 2.6125536, 1.2965616, 3.4240549)
 
-[connection signal="screen_exited" from="VisibleOnScreenEnabler3D" to="." method="_on_visible_on_screen_enabler_3d_screen_exited"]
+[connection signal="screen_exited" from="VisibleOnScreenNotifier3D" to="." method="_on_visible_on_screen_notifier_3d_screen_exited"]

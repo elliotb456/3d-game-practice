@@ -29,6 +29,6 @@ func initialize(start_position, player_position):
 
 
 # This fucntion is called when the signal is triggered by leaving the screen
-func _on_visible_on_screen_enabler_3d_screen_exited():
+func _on_visible_on_screen_notifier_3d_screen_exited():
 	# Destroys the instance it's called on, in this case the main Mob node
 	queue_free()

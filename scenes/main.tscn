@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://dbi8nq6dqr1br"]
 
+[ext_resource type="Script" uid="uid://dvmwbowc36dtf" path="res://scripts/main.gd" id="1_0wfyh"]
 [ext_resource type="PackedScene" uid="uid://viiq1irbdjsl" path="res://scenes/player.tscn" id="1_o5qli"]
+[ext_resource type="PackedScene" uid="uid://c6oyw7i1vi3r3" path="res://scenes/mob.tscn" id="2_sugp2"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_dxwi8"]
 size = Vector3(60, 2, 60)
@@ -23,6 +25,8 @@ _data = {
 point_count = 4
 
 [node name="Main" type="Node" unique_id=1974744536]
+script = ExtResource("1_0wfyh")
+mob_scene = ExtResource("2_sugp2")
 
 [node name="Ground" type="StaticBody3D" parent="." unique_id=1997572162]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
@@ -72,3 +76,11 @@ debug_custom_color = Color(0, 0, 1, 1)
 
 [node name="SpawnLocation" type="PathFollow3D" parent="SpawnPath" unique_id=1018245468]
 transform = Transform3D(-0.9999992, 0, -0.0012330131, 0, 1, 0, 0.0012330131, 0, -0.9999992, -12.992065, 0, -13.916305)
+
+[node name="Timers" type="Node3D" parent="." unique_id=1937200485]
+
+[node name="MobTimer" type="Timer" parent="Timers" unique_id=567661893]
+wait_time = 0.5
+autostart = true
+
+[connection signal="timeout" from="Timers/MobTimer" to="." method="_on_mob_timer_timeout"]
