@@ -19,6 +19,11 @@ config/description="In this game, your goal is to chase and kick out the creeps!
 config/features=PackedStringArray("4.7")
 config/icon="res://icon.webp"
 
+[display]
+
+window/size/viewport_width=720
+window/size/viewport_height=540
+
 [dotnet]
 
 project/assembly_name="3D Game Practice"
