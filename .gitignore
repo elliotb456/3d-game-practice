@@ -14,4 +14,6 @@ export_credentials.cfg
 .mono/
 data_*/
 mono_crash.*.json
+
+# MacOS-specific ignores
 .DS_Store
