@@ -19,6 +19,10 @@ config/description="In this game, your goal is to chase and kick out the creeps!
 config/features=PackedStringArray("4.7")
 config/icon="res://icon.webp"
 
+[autoload]
+
+MusicPlayer="*uid://b0vkceldbhhjd"
+
 [display]
 
 window/size/viewport_width=720
