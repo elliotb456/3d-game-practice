@@ -28,6 +28,9 @@ func initialize(start_position, player_position):
 	# in order to move in the direction the mob is looking.
 	velocity = velocity.rotated(Vector3.UP, rotation.y)
 
+	# Animations
+	$AnimationPlayer.speed_scale = random_speed / min_speed
+
 
 # This fucntion is called when the signal is triggered by leaving the screen
 func _on_visible_on_screen_notifier_3d_screen_exited():
